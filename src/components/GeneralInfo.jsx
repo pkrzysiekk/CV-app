@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./index.css";
+import "../index.css";
 function GeneralInfo() {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [formValues, setFormValues] = useState({
@@ -11,7 +11,6 @@ function GeneralInfo() {
   const handleChange = (event) => {
     const { name, value } = event.target;
     setFormValues({ ...formValues, [name]: value });
-    console.log(formValues);
   };
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -66,7 +65,6 @@ function GeneralInfo() {
         <button className="gn-edit" onClick={(e) => handleEdit(e)}>
           Edit
         </button>
-        {isSubmitted && <p>Submitted,Thank you - {formValues.name}</p>}
       </div>
     </div>
   );
