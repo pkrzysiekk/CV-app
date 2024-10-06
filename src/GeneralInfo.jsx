@@ -24,6 +24,7 @@ function GeneralInfo() {
 
   return (
     <div className="gn-wrapper">
+      <h2 className="gn-title">General Information</h2>
       <input
         name="name"
         type="text"
@@ -58,13 +59,15 @@ function GeneralInfo() {
         value={formValues.number}
         disabled={isSubmitted}
       />
-      <button className="gn-submit" onClick={(e) => handleSubmit(e)}>
-        Submit
-      </button>
-      <button className="gn-edit" onClick={(e) => handleEdit(e)}>
-        Edit
-      </button>
-      {isSubmitted && <p>Submitted,Thank you - {formValues.name}</p>}
+      <div className="gn-buttons">
+        <button className="gn-submit" onClick={(e) => handleSubmit(e)}>
+          Submit
+        </button>
+        <button className="gn-edit" onClick={(e) => handleEdit(e)}>
+          Edit
+        </button>
+        {isSubmitted && <p>Submitted,Thank you - {formValues.name}</p>}
+      </div>
     </div>
   );
 }
