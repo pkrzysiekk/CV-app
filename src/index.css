@@ -13,10 +13,6 @@
 .gn-title {
   grid-column: 1/3;
 }
-.gn-edit,
-.gn-submit {
-  text-align: center;
-}
 
 .gn-submit,
 .gn-edit {
@@ -29,4 +25,50 @@
   justify-self: end;
   display: flex;
   gap: 1vh;
+}
+.ed-title {
+  grid-column: 1/3;
+}
+.ed-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, clamp(100px, 250px, 500px));
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+.ed-buttons {
+  grid-column: 2/3;
+  grid-row: 3/4;
+  justify-self: end;
+  display: flex;
+  gap: 1vh;
+}
+.ed-submit,
+.ed-edit {
+  min-width: 80px;
+  padding: 0.3rem;
+}
+
+.prac-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, clamp(100px, 250px, 500px));
+
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+.prac-buttons {
+  grid-column: 2/3;
+  grid-row: 4/5;
+  justify-self: end;
+  display: flex;
+  gap: 1vh;
+}
+.prac-submit,
+.prac-edit {
+  min-width: 80px;
+  padding: 0.3rem;
+}
+.prac-title {
+  grid-column: 1/3;
 }

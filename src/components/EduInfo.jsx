@@ -9,7 +9,6 @@ function EduInfo() {
   });
   const handleChange = (event) => {
     const { name, value } = event.target;
-    console.log(formData);
     setFormData({ ...formData, [name]: value });
   };
   const handleSubmit = (event) => {
@@ -22,6 +21,7 @@ function EduInfo() {
   };
   return (
     <div className="ed-wrapper">
+      <h2 className="ed-title">Educational experience</h2>
       <input
         type="text"
         placeholder="School Name"
@@ -46,9 +46,13 @@ function EduInfo() {
         value={formData.date}
         disabled={isSubmitted}
       />
-      <div className="buttons">
-        <button onClick={(e) => handleSubmit(e)}>Submit</button>
-        <button onClick={(e) => handleEdit(e)}>Edit</button>
+      <div className="ed-buttons">
+        <button className="ed-submit" onClick={(e) => handleSubmit(e)}>
+          Submit
+        </button>
+        <button className="ed-edit" onClick={(e) => handleEdit(e)}>
+          Edit
+        </button>
       </div>
     </div>
   );
